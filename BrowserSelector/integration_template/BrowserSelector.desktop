@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=TEMPLATE_VERSION
+Name=Browser Selector
+Comment=Browser Selector
+Exec=/home/TEMPLATE_USERNAME/TEMPLATE_FOLDER/BrowserSelector.exe %u
+Path=/home/TEMPLATE_USERNAME/TEMPLATE_FOLDER/
+Icon=/usr/share/icons/Humanity/apps/32/application-default-icon.svg
+Terminal=false
+Type=Application
+Categories=Utility;Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;

@@ -1,0 +1,16 @@
+[Default Applications]
+x-scheme-handler/http=BrowserSelector.desktop
+text/html=BrowserSelector.desktop
+text/xml=BrowserSelector.desktop
+application/xhtml_xml=BrowserSelector.desktop
+image/webp=BrowserSelector.desktop
+x-scheme-handler/https=BrowserSelector.desktop
+x-scheme-handler/ftp=BrowserSelector.desktop
+
+[Added Associations]
+text/html=BrowserSelector.desktop;
+text/xml=BrowserSelector.desktop;
+application/xhtml_xml=BrowserSelector.desktop;
+image/webp=BrowserSelector.desktop;
+x-scheme-handler/https=BrowserSelector.desktop;
+x-scheme-handler/ftp=BrowserSelector.desktop;

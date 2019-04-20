@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Text;
 using System.Threading;
+using System.Reflection;
 using Gtk;
 
 namespace BrowserSelector
@@ -71,7 +72,10 @@ namespace BrowserSelector
 			BrowsersInit();
             Application.Init();
 			mainWin = new MainWindow();
-			mainWin.Title = "Browser Selector";
+			string Title = "Browser Selector";
+			string TitleVer = System.Reflection.Assembly.GetEntryAssembly().GetName().Version.ToString();
+			string TitleFormatStr = string.Format("{0} {1}", Title, TitleVer);
+			mainWin.Title = TitleFormatStr;
             mainWin.Show();
 			url_tv = new TextView();
 

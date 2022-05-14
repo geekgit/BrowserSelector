@@ -75,6 +75,7 @@ namespace BrowserSelector
 			string Title = "Browser Selector";
 			string TitleVer = System.Reflection.Assembly.GetEntryAssembly().GetName().Version.ToString();
 			string TitleFormatStr = string.Format("{0} {1}", Title, TitleVer);
+            string Url="about:blank";
 			mainWin.Title = TitleFormatStr;
             mainWin.Show();
 			url_tv = new TextView();
@@ -97,14 +98,11 @@ namespace BrowserSelector
 			tv = new TextView();
 			if(args.Length>0)
 			{
-				string args_j = string.Join(" ", args);
-				url_tv.Buffer.Text = args_j;
+				Url = string.Join(" ", args);
+				
 			}
-			else
-			{
-				url_tv.Buffer.Text = "about:blank";
-			}
-			tv.Buffer.Text = SysInfo();
+            url_tv.Buffer.Text = Url;
+            tv.Buffer.Text = SysInfo();
 			hbox_buttons.Add(tv);
 			tv.Show();
 			tv.Editable = false;
@@ -115,7 +113,9 @@ namespace BrowserSelector
 			{
 				Button button = new Button();
 				button.Label = browser.Title;
-				vbox_buttons.Add(button);
+                button.Clicked += (sender,eventargs) => { browser.LaunchUrlLinux(Url); };
+
+                vbox_buttons.Add(button);
 				button.Show();
 				BrowserButtons.Add(button);
 				browser.GTKWidget = button;

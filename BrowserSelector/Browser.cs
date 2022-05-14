@@ -123,7 +123,7 @@ namespace BrowserSelector
 					proc.StartInfo.FileName = cmd0;
 					proc.StartInfo.Arguments = string.Join(" ", args_s);
 					proc.StartInfo.WorkingDirectory = Environment.CurrentDirectory;
-					proc.Start();
+                    proc.Start();
 				}
 			}
 		}
